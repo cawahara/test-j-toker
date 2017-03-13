@@ -1,0 +1,423 @@
+@charset "UTF-8";
+/* --------------------------------
+ * base
+ * -------------------------------- */
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  font-size: 1.4rem;
+  height: 100%;
+  background: #fff; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #6d42bb; }
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+input[type='text'],
+input[type='password'],
+input[type='date'],
+textarea,
+select {
+  outline: none; }
+
+input[type='checkbox'] {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
+  vertical-align: -8px;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  /*Other Browser*/
+  background: #e2e2e2;
+  /*For Old WebKit*/
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #e2e2e2));
+  /*For Modern Browser*/
+  background: linear-gradient(to bottom, #fff 0%, #e2e2e2 100%);
+  -webkit-appearance: none; }
+
+input[type='checkbox']:checked {
+  border: 1px solid #360;
+  /*Other Browser*/
+  background: #6d42bb;
+  /*For Old WebKit*/
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6d42bb), color-stop(1, #4d0abe));
+  /*For Modern Browser*/
+  background: linear-gradient(to bottom, #6d42bb 0%, #4d0abe 100%); }
+
+input[type='checkbox']:checked:before {
+  position: absolute;
+  top: 16px;
+  left: 1px;
+  display: block;
+  width: 10px;
+  height: 4px;
+  content: '';
+  -webkit-transform: rotate(45deg);
+  -webkit-transform-origin: right center;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
+
+input[type='checkbox']:checked:after {
+  position: absolute;
+  top: 16px;
+  left: 9px;
+  display: block;
+  width: 16px;
+  height: 4px;
+  content: '';
+  -webkit-transform: rotate(-53deg);
+  -webkit-transform-origin: left center;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+.header {
+  border-bottom: solid 1px #ccc ;
+}
+.header__logo{
+}
+.header__logoImg{
+  height: 30px;
+}
+.header_menu{
+}
+/* --------------------------------
+ * pv
+ * -------------------------------- */
+.pv {
+  border-bottom: solid 1px #ccc ;
+}
+/* --------------------------------
+ * quick action
+ * -------------------------------- */
+.quickAction {
+  border-bottom: solid 1px #ccc ;
+}
+.quickAction__createList{
+
+}
+.quickAction__or{
+
+}
+.quickAction__findItem{
+
+}
+/* --------------------------------
+ * features
+ * -------------------------------- */
+.features{
+  border-bottom: solid 1px #ccc ;
+}
+.features__item{
+
+}
+.features__itemTitle{
+
+}
+/* --------------------------------
+ * footer
+ * -------------------------------- */
+.footer{
+}
+.footer__copyright{
+}
+.footer__socialLinks{
+}
+.footer__policies{
+}
+.footer__policy{
+}
+/* --------------------------------
+ * menu header
+ * -------------------------------- */
+.menuHeader {
+  width: 100%;
+  height: 50px;
+  border-bottom: solid 1px #ccc ;
+  padding: 5px; }
+
+.menuHeader__logoImg {
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+}
+
+.menuHeader__item {
+  width: 25%;
+  font-size: 2.8rem;
+  position: relative;
+  text-align: center;
+  float: left;
+  padding: 0 8px;
+  margin-top: 4px;
+ }
+
+.menuHeader__item a {
+  color: #999; }
+
+.menuHeader__unread {
+  font-size: 1.2rem;
+  line-height: 18px;
+  position: absolute;
+  top: 0;
+  left: 45px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #d0011b;
+  /* red */ }
+
+.menuHeader__title {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  float: left;
+  padding: 0 8px;
+  margin-top: 15px;
+ }
+
+.menuHeader__close {
+  width: 25%;
+  font-size: 2.8rem;
+  position: relative;
+  text-align: center;
+  float: right;
+  padding: 0 8px;
+  margin-top: 4px;
+ }
+
+.menuHeader__close a {
+  color: #999; }
+
+/* --------------------------------
+ * title bar
+ * -------------------------------- */
+.titleBar {
+  height: 41px;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff; }
+
+.titleBar__title {
+  font-size: 1.6rem;
+  position: relative;
+  float: left;
+  margin: 10px; }
+
+.titleBar__access {
+  font-size: 1.8rem;
+  position: relative;
+  float: left;
+  margin: 10px 5px 5px 5px;
+}
+
+.titleBar__sharedWith {
+  font-size: 1.8rem;
+  position: relative;
+  float: right;
+  margin: 10px;
+}
+/* --------------------------------
+ * container
+ * -------------------------------- */
+.container {
+  width: 100%;
+  padding: 0px; }
+
+/* --------------------------------
+ * floating button
+ * -------------------------------- */
+.floatingButton {
+  font-size: 1.6rem;
+  line-height: 53px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 53px;
+  height: 53px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #6D42BB; }
+
+
+/* --------------------------------
+ * list form
+ * -------------------------------- */
+.listForm {
+}
+.listForm__item{
+}
+.listForm__itemLabel{
+}
+.listForm__itemText{
+}
+.listForm__itemTexarea{
+}
+.listForm__itemTag_state_selected{
+  color: #fff;
+  font-size: 0.8rem;
+  height: 30px;
+  padding: 5px 5px;
+  margin: 2px;
+  line-height: 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: #9784BA;
+}
+.listForm__itemTag{
+  color: #9784BA;
+  font-size: 0.8rem;
+  height: 30px;
+  padding: 5px 5px;
+  margin: 2px;
+  line-height: 10px;
+  border: solid 1px #9784BA;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.listForm__itemButton{
+  color: #fff;
+  width: 310px;
+  padding: 5px 10px;
+  margin: 20px;
+  line-height: 30px;
+  border: none;
+  border-radius: 2px;
+  background-color: #6D42BB;
+}
+/* --------------------------------
+ * tab bar
+ * -------------------------------- */
+.tabBar{
+}
+.tabBar__title{
+  padding:10px;
+  width: 50%;
+  position: relative;
+  text-align: center;
+  float: left;
+  border-bottom: solid 1px #ccc;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+}
+.tabBar__title_state_current{
+  padding:10px;
+  width: 50%;
+  position: relative;
+  text-align: center;
+  float: left;
+}
+
+/* --------------------------------
+ * lists (= My List)
+ * -------------------------------- */
+.lists {
+  overflow: hidden;
+  height: auto; }
+
+.lists__list {
+  overflow: hidden;
+  height: auto;
+  padding: 5px 10px;
+  border-bottom: solid 1px #eee; }
+
+@media (min-width: 768px) {
+  .lists__list {
+    width: 617px; } }
+
+.lists__listPicture{
+  position: relative;
+  float: left; }
+
+.lists__listImg {
+  width: 30px;
+  height: 30px; }
+
+.lists__listTitle {
+  font-size: 1.2rem;
+  overflow: hidden;
+  width: 280px;
+  padding: 8.5px;
+  position: relative;
+  float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* --------------------------------
+ * list
+ * -------------------------------- */
+.list {
+  overflow: hidden;
+  height: auto; }
+
+/* --------------------------------
+ * listItem
+ * -------------------------------- */
+
+.listItem {
+  overflow: hidden;
+  height: auto;
+  padding: 5px 10px;
+  border-bottom: solid 1px #eee; }
+
+@media (min-width: 768px) {
+  .listItem {
+    width: 617px; } }
+
+.listItem a {
+  color: #000; }
+
+.listItem__picture {
+  position: relative;
+  float: left; }
+
+.listItem__itemImg {
+  height: 30px; }
+
+.listItem__title {
+  font-size: 1.2rem;
+  overflow: hidden;
+  width: 280px;
+  padding: 8.5px;
+  position: relative;
+  float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (min-width: 768px) {
+  .listItem__title {
+    width: 543px; } }
+
+.listItem__delete {
+  font-size: 2.0rem;
+  position: relative;
+  float: right;
+  padding: 5px;
+}

@@ -1,11 +1,13 @@
 import React from 'react'
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import NavLink from './NavLink'
+import { Link } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {purple800} from 'material-ui/styles/colors';
 import {purple600} from 'material-ui/styles/colors';
 import AppBar from 'material-ui/AppBar';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
 
 injectTapEventPlugin();
 
@@ -19,23 +21,47 @@ const muiTheme = getMuiTheme({
   },
 });
 
-export default React.createClass({
+const style = { padding: '10px' };
+
+export default class App extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {open: false};
+  }
+  handleToggle = () => this.setState({open: !this.state.open});
+  handleClose = () => this.setState({open: false});
   render() {
     return (
       <MuiThemeProvider  muiTheme={muiTheme}>
-      <div>
-        <AppBar title="My AppBar" />
-        <ul role="nav">
-          <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/repos">Repos</NavLink></li>
-          <li><NavLink to="/axiospage">AxiosPage</NavLink></li>
-          <li><NavLink to="/materialui">MaterialUiPage</NavLink></li>
-          <li><NavLink to="/jtoker">jtoker</NavLink></li>
-        </ul>
+        <div>
+      <AppBar 
+        title="React playground"
+        onLeftIconButtonTouchTap={this.handleToggle}
+      />
+      <div style={style}>
         {this.props.children}
       </div>
-      </MuiThemeProvider>
-    )
+    <Drawer
+      docked={false}
+      width={200}
+      open={this.state.open}
+      onRequestChange={(open) => this.setState({open})}
+    >
+      <Link to="/">
+        <MenuItem onTouchTap={this.handleClose}>Home</MenuItem>
+      </Link>
+      <Link to="/axiospage">
+        <MenuItem onTouchTap={this.handleClose}>Axios</MenuItem>
+      </Link>
+      <Link to="/repos">
+        <MenuItem onTouchTap={this.handleClose}>React Router</MenuItem>
+      </Link>
+      <Link to="/jtoker">
+        <MenuItem onTouchTap={this.handleClose}>j-toker</MenuItem>
+      </Link>
+    </Drawer>
+    </div>
+  </MuiThemeProvider>
+    );
   }
-})
+}

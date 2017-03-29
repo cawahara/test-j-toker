@@ -12,6 +12,6 @@ import Axios from 'axios'
 export default React.createClass({
 
   render() {
-    return <div>Axios Page</div>
+    return <div>Axios</div>
   }
 })

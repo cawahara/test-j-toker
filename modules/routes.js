@@ -6,6 +6,7 @@ import Repo from './Repo'
 import Home from './Home'
 import AxiosPage from './AxiosPage'
 import JtokerPage from './JtokerPage'
+import UploadImage from './UploadImage'
 
 module.exports = (
   <Route path="/" component={App}>
@@ -15,5 +16,6 @@ module.exports = (
     </Route>
     <Route path="/axiospage" component={AxiosPage}/>
     <Route path="/jtoker" component={JtokerPage}/>
+    <Route path="/uploadimage" component={UploadImage}/>
   </Route>
 )

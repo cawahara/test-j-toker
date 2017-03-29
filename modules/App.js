@@ -59,6 +59,9 @@ export default class App extends React.Component{
       <Link to="/jtoker">
         <MenuItem onTouchTap={this.handleClose}>j-toker</MenuItem>
       </Link>
+      <Link to="/uploadimage">
+        <MenuItem onTouchTap={this.handleClose}>Upload Image</MenuItem>
+      </Link>
     </Drawer>
     </div>
   </MuiThemeProvider>
